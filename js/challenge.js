@@ -102,3 +102,22 @@ function likesHell(key, likes) {
         return likes; 
     }
 }
+
+
+function timer() {
+    while(true) {
+        let num = document.querySelector('#counter').textContent;
+        setTimeout(() => plusOne(num), 1000);
+        console.log(num);
+        return num;
+    }
+}
+
+function plusOne(){
+    let time = parseInt(counter.textContent);
+    let newTime = time + 1; 
+    return counter.textContent = newTime;
+}
+
+
+setInterval(plusOne, 1000);
